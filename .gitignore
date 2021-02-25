@@ -228,3 +228,9 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Project data files
+flaskr/static/data
+
+#vscode
+.vscode/
