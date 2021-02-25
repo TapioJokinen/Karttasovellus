@@ -1,4 +1,4 @@
-# File: dwnld_liikennelaskimet_data.py
+# File: liikennelaskimet.py
 # Author: Tapio Jokinen
 # Description: Downloads liikennelaskimet.geojson file which contains data of traffic calculator locations. 
 # Creates a new simplified json file without unnecessary data.
