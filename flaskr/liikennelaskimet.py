@@ -1,7 +1,11 @@
-# File: liikennelaskimet.py
-# Author: Tapio Jokinen
-# Description: Downloads liikennelaskimet.geojson file which contains data of traffic calculator locations. 
-# Creates a new simplified json file without unnecessary data.
+"""
+File: liikennelaskimet.py
+Author: Tapio Jokinen
+
+Description: 
+Downloads liikennelaskimet.geojson file which contains data of traffic calculator locations. 
+Creates a new simplified json file without unnecessary data.
+"""
 
 import requests
 import json
@@ -9,8 +13,9 @@ import json
 def liikennelaskimet():
 
     # Try to get liikennelaskimet.geojson file
+    # Certification verification disabled.
     try:
-        response = requests.get("https://dev.turku.fi/datasets/ecocounter/liikennelaskimet.geojson", verify=False) # Certification verification disabled.
+        response = requests.get("https://dev.turku.fi/datasets/ecocounter/liikennelaskimet.geojson", verify=False)
         response.raise_for_status()
     except requests.HTTPError as err:
         print(err)
