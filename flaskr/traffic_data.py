@@ -18,7 +18,7 @@ def traffic_data(vehicle_type):
         print("Wrong vehicle type")
         return False
         
-    # Read file into pandas dataframe
+    # Read file into pandas dataframe. Also replace empty values with zeros.
     try:
         df = pd.read_csv("https://dev.turku.fi/datasets/ecocounter/2020/counters-15min.csv", sep=",", na_values=0)
     except (pd.errors.EmptyDataError, pd.errors.ParserError):
