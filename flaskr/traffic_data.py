@@ -13,10 +13,10 @@ import json
 
 def traffic_data(vehicle_type):
 
-    if vehicle_type != ("car" or "bicycle" or "pedestrian"):
-        print("Vehicle type error")
-        return
-
+    # Check if vehicle type is right.
+    if (vehicle_type != "car") and (vehicle_type != "bicycle") and (vehicle_type != "pedestrian"):
+        return False
+        
     # Read file into pandas dataframe
     try:
         df = pd.read_csv("https://dev.turku.fi/datasets/ecocounter/2020/counters-15min.csv", sep=",", na_values=0)
@@ -35,8 +35,7 @@ def traffic_data(vehicle_type):
             if not column.endswith(("aika", "JP", "JK")):
                 del df[column]
 
-
-    file_name = "./static/data/traffic_data_{}.json".format(vehicle_type)
+    file_name = "flaskr/static/data/traffic_data_{}s.json".format(vehicle_type)
 
     # Convert object to a json file.
     df.to_json(file_name, orient="records")
@@ -50,3 +49,5 @@ def traffic_data(vehicle_type):
     k = open(file_name, "w")
     k.write(jsonString)
     k.close()
+
+    return True
