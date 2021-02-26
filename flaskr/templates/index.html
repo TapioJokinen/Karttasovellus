@@ -8,11 +8,15 @@
   <meta name="description" content="Opinnäytetyö">
   <meta name="author" content="Tapio Jokinen">
 
-  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" href="../static/css/map.css">
+  <link rel="stylesheet" href="../static/css/index.css">
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdAklHceZcpfkqtXPzMa6dwuhB1a0XpgI"></script>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <div id="map"></div>
+
+    <script src="{{ url_for('static', filename='js/googleMaps.js') }}"></script>
 </body>
 </html>
