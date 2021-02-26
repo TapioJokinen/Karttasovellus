@@ -17,6 +17,40 @@
 <body>
     <div id="map"></div>
 
+    <div id="container">
+
+      <div id="container-cars">
+        <div class="container-buttons">
+          <button class="button-show" id="button-show-cars" type="button">Show cars</button>
+          <button class="button-hide" id="button-hide-cars" type="button">Hide cars</button>
+        </div>
+        <div class="container-error" id="error-datepicker-cars">
+          <span id="error-datepicker-cars-text"></span>
+        </div>
+        <div class="container-datepicker" id="container-datepicker-cars">
+          <div class="container-datepicker-start">
+            <span>Start: </span>
+            <input id="date-start-cars" type="date" min="2020-01-01">
+            <input id="time-start-cars" type="time" value="00:00">
+          </div>
+          <div class="container-datepicker-end">
+            <span>End: </span>
+            <input id="date-end-cars" type="date">
+            <input id="time-end-cars" type="time" value="00:00">
+          </div>
+          <button class="button-search" id="button-search-cars">Search</button>
+        </div>
+        <div class="container-data" id="container-data-cars">
+          <ul id="data-cars"></ul>
+        </div>
+      </div>
+
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/latestValues.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/filterLocations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/drawAreasOnMap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cars.js') }}"></script>
     <script src="{{ url_for('static', filename='js/googleMaps.js') }}"></script>
 </body>
 </html>
