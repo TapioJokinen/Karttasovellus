@@ -9,7 +9,7 @@ data_folder = "static/data/"
 def main_page():
     return render_template("index.html")
 
-@app.route("/data/liikennelaskimet.json")
+@app.route("/data/liikennelaskimet")
 def send_liikennelaskimet():
     try:
         liikennelaskimet()
@@ -20,9 +20,11 @@ def send_liikennelaskimet():
 @app.route("/data/<path:vehicle>")
 def send_vehicle(vehicle):
     try:
-        if traffic_data(vehicle):
+        success = traffic_data(vehicle)
+        if success:
             return send_from_directory(data_folder, "traffic_data_{}s.json".format(vehicle))
         else:
-            return "Wrong vehicle type."
+            return "Nothing here..."
+            
     except FileNotFoundError:
         print("traffic_data_{}s.json was not found.".format(vehicle))
