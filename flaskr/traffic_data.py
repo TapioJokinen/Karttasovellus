@@ -15,6 +15,7 @@ def traffic_data(vehicle_type):
 
     # Check if vehicle type is right.
     if (vehicle_type != "car") and (vehicle_type != "bicycle") and (vehicle_type != "pedestrian"):
+        print("Wrong vehicle type")
         return False
         
     # Read file into pandas dataframe
