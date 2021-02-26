@@ -1,7 +1,8 @@
-// File: googleMaps.js
-// Author: Tapio Jokinen
-// Description: Initializes map and functions used for it.
-
+/* 
+File: googleMaps.js
+Author: Tapio Jokinen
+Description: Initializes map.
+*/ 
 
 let map;
 
@@ -15,6 +16,5 @@ const initMap = async () => {
         zoom: defaultZoom,
       });
 }
-
 
 initMap()
