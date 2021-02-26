@@ -10,7 +10,6 @@ is defined as function parameter.
 
 import pandas as pd
 import json
-import time
 
 def traffic_data(vehicle_type):
 
