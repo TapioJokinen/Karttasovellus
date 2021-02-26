@@ -39,6 +39,6 @@ def liikennelaskimet():
     jsonString = json.dumps(features, indent=2)
 
     # Create new json file from the string.
-    k = open("./static/data/liikennelaskimet.json", "w")
+    k = open("flaskr/static/data/liikennelaskimet.json", "w")
     k.write(jsonString)
     k.close()
