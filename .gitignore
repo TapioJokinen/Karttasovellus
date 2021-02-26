@@ -230,7 +230,7 @@ lerna-debug.log
 Thumbs.db
 
 # Project data files
-flaskr/static/data
+flaskr/static/data/
 
 #vscode
 .vscode/
