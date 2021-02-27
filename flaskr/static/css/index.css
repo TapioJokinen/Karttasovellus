@@ -11,6 +11,5 @@ body {
   top: 0;
   right: 0;
   position: fixed;
-  background-color: brown;
-  border: 1px solid red;
+  background-color: rgb(40, 42, 46);
 }
