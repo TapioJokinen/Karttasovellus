@@ -11,11 +11,11 @@ const cars = async(map) => {
     let trafficData = {};
     let drawnMapObjects = [];
 
-    // To disable multiple clicks.
-    let clickable = true;
+    // Whether to show or hide.
+    let clickStatus = true;
 
     btnShowHideCars.addEventListener("click", () => {
-        if (clickable) {
+        if (clickStatus) {
             (async () => {
 
                 // Fetch location and traffic data.
@@ -41,20 +41,19 @@ const cars = async(map) => {
                 // Change button text on click.
                 btnShowHideCars.innerText = "Hide cars";
 
-                clickable = false;
+                clickStatus = false;
             })();
         } else {
 
             // Clear all data from map and screen.
             clearDrawnObjects(drawnMapObjects);
-
             dataCars.innerHTML = "";
             errorText.textContent = "";
 
             // Change button text on click.
             btnShowHideCars.innerText = "Show cars";
 
-            clickable = true;
+            clickStatus = true;
         }
     });
 
