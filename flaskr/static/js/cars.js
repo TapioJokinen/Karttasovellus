@@ -104,10 +104,10 @@ const cars = async(map) => {
                 drawnMapObjects = drawAreasOnMap(map, filterLocations(locationData, trafficData), "car");
 
                 // Total traffic between the start and end date.
-                let totalTraffic = totalTraffic(trafficData, start, end);
+                let traffic = totalTraffic(trafficData, start, end);
 
-                Object.keys(totalTraffic).forEach((key) => {
-                    let s = `${key}: ${totalTraffic[key]}`;
+                Object.keys(traffic).forEach((key) => {
+                    let s = `${key}: ${traffic[key]}`;
                     let ul = document.getElementById("data-cars");
                     let li = document.createElement("li");
                     li.appendChild(document.createTextNode(s));
