@@ -34,7 +34,8 @@ const totalTraffic = (trafficData, dateStart, dateEnd) => {
     }
   }
 
-  places.shift(); // Remove first element "aika".
+  // Remove first element "aika".
+  places.shift(); 
 
   // Create key/value pairs
   let dict = {};
