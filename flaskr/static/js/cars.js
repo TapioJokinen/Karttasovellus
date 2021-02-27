@@ -1,8 +1,7 @@
 const cars = async(map) => {
 
     // HTML elements.
-    const btnShowCars = document.getElementById("button-show-cars");
-    const btnHideCars = document.getElementById("button-hide-cars");
+    const btnShowHideCars = document.getElementById("button-show-hide-cars");
     const btnSearchCars = document.getElementById("button-search-cars");
     const dataCars = document.getElementById("data-cars");
     const errorText = document.getElementById("error-datepicker-cars-text")
@@ -15,7 +14,7 @@ const cars = async(map) => {
     // To disable multiple clicks.
     let clickable = true;
 
-    btnShowCars.addEventListener("click", () => {
+    btnShowHideCars.addEventListener("click", () => {
         if (clickable) {
             (async () => {
 
@@ -39,15 +38,24 @@ const cars = async(map) => {
                 // Write latest values to web page.
                 latestValues(trafficData, "data-cars");
 
+                // Change button text on click.
+                btnShowHideCars.innerText = "Hide cars";
+
                 clickable = false;
             })();
+        } else {
+
+            // Clear all data from map and screen.
+            clearDrawnObjects(drawnMapObjects);
+
+            dataCars.innerHTML = "";
+            errorText.textContent = "";
+
+            // Change button text on click.
+            btnShowHideCars.innerText = "Show cars";
+
+            clickable = true;
         }
     });
 
-    btnHideCars.addEventListener("click", () => {
-        clearDrawnObjects(drawnMapObjects);
-        dataCars.innerHTML = "";
-        errorText.textContent = "";
-        clickable = true;
-    });
 }
