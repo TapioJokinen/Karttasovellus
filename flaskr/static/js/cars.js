@@ -107,6 +107,7 @@ const cars = async(map) => {
                 }
                 
                 // Draw areas on map
+                clearDrawnObjects(drawnMapObjects);
                 drawnMapObjects = drawAreasOnMap(map, filterLocations(locationData, trafficData), "car");
 
                 // Total traffic between the start and end date.
