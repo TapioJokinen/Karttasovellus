@@ -19,6 +19,11 @@
 
     <div id="container">
 
+
+
+
+
+
       <div id="container-cars">
         <div class="container-buttons">
           <button class="button-show-hide" id="button-show-hide-cars" type="button">Show cars</button>
@@ -44,6 +49,39 @@
         </div>
       </div>
 
+
+
+
+      <div id="container-bicycles">
+        <div class="container-buttons">
+          <button class="button-show-hide" id="button-show-hide-bicycles" type="button">Show bicycles</button>
+        </div>
+        <div class="container-error" id="error-datepicker-bicycles">
+          <span id="error-datepicker-bicycles-text"></span>
+        </div>
+        <div class="container-datepicker" id="container-datepicker-bicycles">
+          <div class="container-datepicker-start">
+            <span>Start: </span>
+            <input id="date-start-bicycles" type="date" min="2020-01-01">
+            <input id="time-start-bicycles" type="time" value="00:00">
+          </div>
+          <div class="container-datepicker-end">
+            <span>End: </span>
+            <input id="date-end-bicycles" type="date">
+            <input id="time-end-bicycles" type="time" value="00:00">
+          </div>
+          <button class="button-search" id="button-search-bicycles">Search</button>
+        </div>
+        <div class="container-data" id="container-data-bicycles">
+          <ul id="data-bicycles"></ul>
+        </div>
+      </div>
+
+
+
+
+
+
     </div>
     
     <script src="{{ url_for('static', filename='js/totalTraffic.js') }}"></script>
@@ -53,6 +91,7 @@
     <script src="{{ url_for('static', filename='js/filterLocations.js') }}"></script>
     <script src="{{ url_for('static', filename='js/drawAreasOnMap.js') }}"></script>
     <script src="{{ url_for('static', filename='js/cars.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bicycles.js') }}"></script>
     <script src="{{ url_for('static', filename='js/googleMaps.js') }}"></script>
 </body>
 </html>
