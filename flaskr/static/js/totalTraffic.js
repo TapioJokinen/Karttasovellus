@@ -1,4 +1,5 @@
-/*File: totalTraffic.js
+/*
+File: totalTraffic.js
 Author: Tapio Jokinen
 
 Description:  Calculates the total traffic between dateStart and dateEnd. Returns a dictionary
@@ -9,9 +10,8 @@ const totalTraffic = (trafficData, dateStart, dateEnd) => {
 
   // Get the names of the places.
   let places = Object.keys(trafficData[0]);
-  console.log(places)
 
-  // Contains values of total traffic for each place.
+  // Contains volumes of traffic for each place.
   let countList = new Array(places.length - 1).fill(0);
 
   for (let i = 0; i < trafficData.length; i++) {
