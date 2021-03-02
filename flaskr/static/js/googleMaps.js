@@ -17,5 +17,6 @@ const initMap = async () => {
 }
 
 initMap().then(() => {
-  cars(map)
+  cars(map);
+  bicycles(map);
 })
