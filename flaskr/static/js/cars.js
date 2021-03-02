@@ -80,7 +80,7 @@ const cars = async(map) => {
         let start = new Date(startDateString);
         let end = new Date(endDateString);
 
-        // Check for errors then proceed.
+        // Check for user input errors.
         if (start > end) {
             errorText.textContent = "Start date must be smaller than the end date!";
         } else {
@@ -106,6 +106,7 @@ const cars = async(map) => {
                 // Total traffic between the start and end date.
                 let traffic = totalTraffic(trafficData, start, end);
 
+                // Write data to web page.
                 Object.keys(traffic).forEach((key) => {
                     let s = `${key}: ${traffic[key]}`;
                     let ul = document.getElementById("data-cars");
