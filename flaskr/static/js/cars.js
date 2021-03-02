@@ -1,3 +1,9 @@
+/*
+File: cars.js
+Author: Tapio Jokinen
+Description: Handles all events related to car tarffic.
+*/
+
 const cars = async(map) => {
 
     // HTML elements.
