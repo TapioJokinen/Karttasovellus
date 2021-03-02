@@ -20,7 +20,8 @@ def traffic_data(vehicle_type):
         
     # Read file into pandas dataframe. Also replace empty values with zeros.
     try:
-        df = pd.read_csv("https://dev.turku.fi/datasets/ecocounter/2020/counters-15min.csv", sep=",", na_values=0)
+        df = pd.read_csv("https://dev.turku.fi/datasets/ecocounter/2020/counters-15min.csv", sep=",")
+        df.fillna(0, inplace=True)
     except (pd.errors.EmptyDataError, pd.errors.ParserError):
         print("Error while reading file into dataframe.")
 
