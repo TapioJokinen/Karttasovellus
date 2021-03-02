@@ -19,4 +19,4 @@ const initMap = async () => {
 initMap().then(() => {
   cars(map);
   bicycles(map);
-})
+});
