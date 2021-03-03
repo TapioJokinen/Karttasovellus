@@ -1,7 +1,7 @@
 /*
 File: bicycles.js
 Author: Tapio Jokinen
-Description: Handles all events related to bicycle tarffic.
+Description: Handles all events related to bicycle traffic.
 */
 
 const bicycles = async(map) => {

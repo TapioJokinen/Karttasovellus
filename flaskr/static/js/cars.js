@@ -1,7 +1,7 @@
 /*
 File: cars.js
 Author: Tapio Jokinen
-Description: Handles all events related to car tarffic.
+Description: Handles all events related to car traffic.
 */
 
 const cars = async(map) => {
