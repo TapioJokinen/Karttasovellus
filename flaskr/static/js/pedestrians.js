@@ -57,7 +57,7 @@ const pedestrians = async(map) => {
             errorText.textContent = "";
 
             // Change button text on click.
-            btnShowHidePedestrians.innerText = "Show pedestrians";
+            btnShowHidePedestrians.innerText = "Pedestrians";
 
             clickStatus = true;
         }
@@ -121,9 +121,10 @@ const pedestrians = async(map) => {
                     li.appendChild(document.createTextNode(s));
                     ul.appendChild(li);
                   });
+
+                btnShowHidePedestrians.innerText = "Hide pedestrians";
+                clickStatus = false;
             })();
         }
-
     });
-
 }

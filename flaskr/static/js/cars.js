@@ -57,7 +57,7 @@ const cars = async(map) => {
             errorText.textContent = "";
 
             // Change button text on click.
-            btnShowHideCars.innerText = "Show cars";
+            btnShowHideCars.innerText = "Cars";
 
             clickStatus = true;
         }
@@ -121,9 +121,10 @@ const cars = async(map) => {
                     li.appendChild(document.createTextNode(s));
                     ul.appendChild(li);
                   });
+
+                btnShowHideCars.innerText = "Hide cars";
+                clickStatus = false;
             })();
         }
-
     });
-
 }

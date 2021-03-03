@@ -58,7 +58,7 @@ const bicycles = async(map) => {
             errorText.textContent = "";
 
             // Change button text on click.
-            btnShowHideBicycles.innerText = "Show bicycles";
+            btnShowHideBicycles.innerText = "Bicycles";
 
             clickStatus = true;
         }
@@ -122,9 +122,10 @@ const bicycles = async(map) => {
                     li.appendChild(document.createTextNode(s));
                     ul.appendChild(li);
                   });
+
+                btnShowHideBicycles.innerText = "Hide bicycles";
+                clickStatus = false;
             })();
         }
-
     });
-
 }
