@@ -80,6 +80,34 @@
 
 
 
+      <div id="container-pedestrians">
+        <div class="container-buttons">
+          <button class="button-show-hide" id="button-show-hide-pedestrians" type="button">Show pedestrians</button>
+        </div>
+        <div class="container-error" id="error-datepicker-pedestrians">
+          <span id="error-datepicker-pedestrians-text"></span>
+        </div>
+        <div class="container-datepicker" id="container-datepicker-pedestrians">
+          <div class="container-datepicker-start">
+            <span>Start: </span>
+            <input id="date-start-pedestrians" type="date" min="2020-01-01">
+            <input id="time-start-pedestrians" type="time" value="00:00">
+          </div>
+          <div class="container-datepicker-end">
+            <span>End: </span>
+            <input id="date-end-pedestrians" type="date">
+            <input id="time-end-pedestrians" type="time" value="00:00">
+          </div>
+          <button class="button-search" id="button-search-pedestrians">Search</button>
+        </div>
+        <div class="container-data" id="container-data-pedestrians">
+          <ul id="data-pedestrians"></ul>
+        </div>
+      </div>
+
+
+
+
 
 
     </div>
@@ -92,6 +120,7 @@
     <script src="{{ url_for('static', filename='js/drawAreasOnMap.js') }}"></script>
     <script src="{{ url_for('static', filename='js/cars.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bicycles.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pedestrians.js') }}"></script>
     <script src="{{ url_for('static', filename='js/googleMaps.js') }}"></script>
 </body>
 </html>
