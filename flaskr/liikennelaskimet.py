@@ -15,7 +15,8 @@ def liikennelaskimet():
     # Try to get liikennelaskimet.geojson file
     # Certification verification disabled.
     try:
-        response = requests.get("https://dev.turku.fi/datasets/ecocounter/liikennelaskimet.geojson", verify=False)
+        response = requests.get(
+            "https://dev.turku.fi/datasets/ecocounter/liikennelaskimet.geojson", verify=False)
         response.raise_for_status()
     except requests.HTTPError as err:
         print(err)
