@@ -6,9 +6,11 @@ Function returns an array of drawn objects.
  */
 
 const drawAreasOnMap = (map, locationData, type) => {
+
     let drawnObjects = [];
     let color = "#FFFFFF";
 
+    // Choose color based on vehicle type.
     switch (type) {
       case "car":
         color = "#74ad5a";
