@@ -5,6 +5,7 @@ Description: Adds <li> elements to a list that shows latest values of trafficDat
 */
 
 const latestValues = (trafficData, ul_id) => {
+  
   let keys = Object.keys(trafficData[trafficData.length - 1]);
   let dataStrings = [];
 
